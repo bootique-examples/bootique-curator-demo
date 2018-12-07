@@ -14,15 +14,19 @@ cd bootique-curator-demo
 mvn package
 ```
 
-Download and Run the [zooKeeper](http://ftp.byfly.by/pub/apache.org/zookeeper/stable/) server with version 3.4.* .
+# Start Zookeeper
 
-Enter the following (with -m prefix) to launch the app with all commands in Maven:
+```bash
+docker run --name demo-zookeeper -p 2181:2181 --restart always -d zookeeper:3.4
+```
+
+# Run the demo
 
 ```bash
 java -jar target/bootique-curator-demo-1.0-SNAPSHOT.jar
 ```
 
-After run you will see the folowing lines:
+If all done right you will see output like this:
 ```
 /a: CREATE
  version: none
@@ -33,7 +37,4 @@ After run you will see the folowing lines:
 /a: DELETE
  version: none
 ```
-
-That means that curator client created node '/a' with no version, then this node was updated and get version '1', then it was updated again and get version '2' and then it was removed.
-
 

@@ -12,14 +12,15 @@ public class Application implements Module {
                 .app(args)
                 .autoLoadModules()
                 .module(Application.class)
-                .args("--curator-start", "--config=classpath:config.yml")
+                .args("--curator-operation", "--config=classpath:config.yml")
                 .exec()
                 .exit();
     }
 
     @Override
     public void configure(Binder binder) {
-        BQCoreModule.extend(binder).addCommand(CuratorStartCommand.class);
+        BQCoreModule.extend(binder)
+                .addCommand(CuratorOperationCommand.class);
     }
 
 }
