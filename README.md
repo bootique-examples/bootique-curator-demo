@@ -16,6 +16,8 @@ mvn package
 
 # Start Zookeeper
 
+You can use docker to run test instance of Zookeeper:
+
 ```bash
 docker run --name demo-zookeeper -p 2181:2181 --restart always -d zookeeper:3.4
 ```

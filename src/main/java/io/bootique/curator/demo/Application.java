@@ -8,11 +8,9 @@ import io.bootique.Bootique;
 public class Application implements Module {
 
     public static void main(String[] args) {
-        Bootique
-                .app(args)
+        Bootique.app(args)
                 .autoLoadModules()
                 .module(Application.class)
-                .args("--curator-operation", "--config=classpath:config.yml")
                 .exec()
                 .exit();
     }
@@ -20,7 +18,9 @@ public class Application implements Module {
     @Override
     public void configure(Binder binder) {
         BQCoreModule.extend(binder)
-                .addCommand(CuratorOperationCommand.class);
+                .addConfig("classpath:config.yml")
+                .addCommand(CuratorOperationCommand.class)
+                .setDefaultCommand(CuratorOperationCommand.class);
     }
 
 }
