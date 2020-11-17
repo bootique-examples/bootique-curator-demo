@@ -2,13 +2,13 @@ package io.bootique.curator.demo;
 
 import java.util.List;
 
-import com.google.inject.Inject;
 import io.bootique.cli.Cli;
 import io.bootique.command.Command;
 import io.bootique.command.CommandOutcome;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.api.transaction.CuratorTransactionResult;
 
+import javax.inject.Inject;
 import javax.inject.Provider;
 
 public class CuratorOperationCommand implements Command {

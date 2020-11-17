@@ -25,7 +25,7 @@ docker run --name demo-zookeeper -p 2181:2181 --restart always -d zookeeper:3.4
 # Run the demo
 
 ```bash
-java -jar target/bootique-curator-demo-1.0-SNAPSHOT.jar
+java -jar target/bootique-curator-demo-2.0.jar
 ```
 
 If all done right you will see output like this:
