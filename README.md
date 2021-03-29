@@ -1,3 +1,5 @@
+[![verify](https://github.com/bootique-examples/bootique-curator-demo/actions/workflows/verify.yml/badge.svg)](https://github.com/bootique-examples/bootique-curator-demo/actions/workflows/verify.yml)
+
 # bootique-curator-demo
 
 Simple [Bootique](http://bootique.io) app demonstrating the Bootique Curator Module
